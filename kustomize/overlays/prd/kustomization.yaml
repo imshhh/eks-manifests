@@ -13,6 +13,6 @@ resources:
   - ../../base/prd-ingress.yaml
 
 patches:
-  - path: patch.yaml
+  - path: overlays/prd/patch.yaml
     target:
       kind: Deployment
