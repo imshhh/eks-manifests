@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: concert-nginx
 spec:
-  replicas: 2
+  replicas: 8
   template:
     spec:
       containers:
@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: concert-tomcat
 spec:
-  replicas: 2
+  replicas: 8
   template:
     spec:
       containers:
@@ -29,7 +29,7 @@ kind: Deployment
 metadata:
   name: login-nginx
 spec:
-  replicas: 2
+  replicas: 8
   template:
     spec:
       containers:
@@ -42,7 +42,7 @@ kind: Deployment
 metadata:
   name: login-tomcat
 spec:
-  replicas: 2
+  replicas: 8
   template:
     spec:
       containers:
@@ -55,7 +55,7 @@ kind: Deployment
 metadata:
   name: root-nginx
 spec:
-  replicas: 2
+  replicas: 8
   template:
     spec:
       containers:
@@ -68,7 +68,7 @@ kind: Deployment
 metadata:
   name: root-tomcat
 spec:
-  replicas: 2
+  replicas: 8
   template:
     spec:
       containers:
