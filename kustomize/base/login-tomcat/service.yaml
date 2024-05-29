@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: login-tomcat
+  name: login-tomcat-svc
+  namespace: back-end
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: login-tomcat
+  type: ClusterIP
+  clusterIP: 172.20.20.200 
+status:
+  loadBalancer: {}

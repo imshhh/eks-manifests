@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../../base/concert-nginx
+  - ../../base/concert-tomcat
+  - ../../base/login-nginx
+  - ../../base/login-tomcat
+  - ../../base/root-nginx
+  - ../../base/root-tomcat
+
+patches:
+  - path: patch.yaml
+    target:
+      kind: Deployment

@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: concert-nginx
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: concert-nginx
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/concert-nginx:v1.0
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: concert-tomcat
+spec:
+  replicas: 2
+    template:
+    spec:
+      containers:
+      - name: concert-tomcat
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/concert-tomcat:baepo
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-nginx
+spec:
+  replicas: 2
+    template:
+    spec:
+      containers:
+      - name: login-nginx
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/login-nginx:v2.0
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-tomcat
+spec:
+  replicas: 2
+    template:
+    spec:
+      containers:
+      - name: login-tomcat
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/login-tomcat:baepo
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: root-nginx
+spec:
+  replicas: 2
+    template:
+    spec:
+      containers:
+      - name: root-nginx
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/root-nginx:v2.0
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: root-tomcat
+spec:
+  replicas: 2
+    template:
+    spec:
+      containers:
+      - name: root-tomcat
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/root-tomcat:beapo2
+
