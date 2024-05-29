@@ -10,6 +10,6 @@ bases:
   - ../../base/root-tomcat
 
 patches:
-  - path: patch.yaml
+  - path: overlays/dev/patch.yaml
     target:
       kind: Deployment
