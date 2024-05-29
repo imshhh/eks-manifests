@@ -13,6 +13,6 @@ resources:
   - ../../base/stg-ingress.yaml
 
 patches:
-  - path: patch.yaml
+  - path: overlays/stg/patch.yaml
     target:
       kind: Deployment
