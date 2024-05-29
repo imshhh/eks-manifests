@@ -6,7 +6,7 @@ metadata:
   name: concert-nginx
   namespace: front-end
 spec:
-  replicas: 2
+  replicas: $(REPLICA_COUNT)
   selector:
     matchLabels:
       app: concert-nginx
@@ -38,7 +38,7 @@ spec:
             app: concert-nginx
       containers:
       - name: concert-nginx
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/concert-nginx:v2.0
+        image: $(CONCERT_NGINX_IMAGE)
         ports:
         - containerPort: 80
         livenessProbe:
