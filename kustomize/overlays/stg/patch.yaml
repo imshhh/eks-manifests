@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: concert-nginx
+  namespace: front-end
 spec:
   replicas: 10
   template:
