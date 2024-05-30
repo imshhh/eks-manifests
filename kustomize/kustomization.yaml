@@ -20,11 +20,7 @@ resources:
   - base/root-tomcat/deploy.yaml
   - base/root-tomcat/service.yaml
   - base/root-tomcat/hpa.yaml
-  - base/prd-ingress.yaml
   - base/stg-ingress.yaml
-
-resources:
-  - ../../base/prd-ingress.yaml
 
 patches:
   - path: overlays/stg/patch.yaml
