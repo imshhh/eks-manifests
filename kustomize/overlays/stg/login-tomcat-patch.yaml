@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: login-tomcat
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/login-tomcat:baepo
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/stg-login-tomcat:v1.0
