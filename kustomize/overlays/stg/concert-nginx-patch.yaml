@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: concert-nginx
 spec:
-  replicas: 10
+  replicas: 2
   template:
     spec:
       containers:
