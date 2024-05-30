@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: login-nginx
 spec:
-  replicas: 2
+  replicas: 6
   template:
     spec:
       containers:
