@@ -7,7 +7,7 @@ metadata:
   name: tomcat
   namespace: back-end
 spec:
-  replicas: 2
+  replicas: $(TOMCAT_REPLICA_COUNT)
   selector:
     matchLabels:
       app: tomcat
@@ -39,7 +39,7 @@ spec:
             app: tomcat
       containers:
       - name: tomcat
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/stg-root-tomcat:v1.0
+        image: $(TOMCAT_IMAGE)
         ports:
         - containerPort: 8080
         livenessProbe:
