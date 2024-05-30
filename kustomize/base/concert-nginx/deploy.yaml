@@ -6,7 +6,7 @@ metadata:
   name: concert-nginx
   namespace: front-end
 spec:
-  replicas: $(REPLICA_COUNT)
+  replicas: $(CONCERT_NGINX_REPLICA_COUNT)
   selector:
     matchLabels:
       app: concert-nginx
