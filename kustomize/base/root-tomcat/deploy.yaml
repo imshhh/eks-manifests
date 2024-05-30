@@ -5,7 +5,7 @@ metadata:
   labels:
     app: tomcat
   name: tomcat
-  namespace: $(TOMCAT_NAMESPACE)
+  namespace: back-end
 spec:
   replicas: $(TOMCAT_REPLICA_COUNT)
   selector:
