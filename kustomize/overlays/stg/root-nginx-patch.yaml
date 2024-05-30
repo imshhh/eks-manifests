@@ -7,5 +7,5 @@ spec:
   template:
     spec:
       containers:
-      - name: root-nginx
+      - name: nginx
         image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/root-nginx:v2.0
