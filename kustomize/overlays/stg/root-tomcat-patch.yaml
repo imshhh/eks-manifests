@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tomcat
 spec:
-  replicas: 6
+  replicas: 2
   template:
     spec:
       containers:
