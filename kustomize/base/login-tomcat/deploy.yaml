@@ -7,7 +7,7 @@ metadata:
   name: login-tomcat
   namespace: back-end
 spec:
-  replicas: 2
+  replicas: $(LOGIN_TOMCAT_REPLICA_COUNT)
   selector:
     matchLabels:
       app: login-tomcat
@@ -39,7 +39,7 @@ spec:
             app: login-tomcat
       containers:
       - name: login-tomcat
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/stg-login-tomcat:v1.0
+        image: $(LOGIN_TOMCAT_IMAGE)
         ports:
         - containerPort: 8080
         livenessProbe:
