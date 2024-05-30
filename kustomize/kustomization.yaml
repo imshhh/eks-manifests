@@ -25,4 +25,6 @@ resources:
 
 patches:
   - path: overlays/stg/patch.yaml
+      target:
+      kind: Deployment
 
