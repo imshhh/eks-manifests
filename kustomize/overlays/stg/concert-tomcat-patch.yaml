@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: concert-tomcat
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/stg-concert-tomcat:v1.0
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/stg-concert-tomcat:baepo
