@@ -5,7 +5,7 @@ metadata:
   labels:
     app: login-tomcat
   name: login-tomcat
-  namespace: $(LOGIN_TOMCAT_NAMESPACE)
+  namespace: back_end
 spec:
   replicas: $(LOGIN_TOMCAT_REPLICA_COUNT)
   selector:
