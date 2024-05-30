@@ -6,7 +6,7 @@ metadata:
   name: login-nginx
   namespace: front-end
 spec:
-  replicas: 2
+  replicas: $(LOGIN_NGINX_REPLICA_COUNT)
   selector:
     matchLabels:
       app: login-nginx
@@ -38,7 +38,7 @@ spec:
             app: login-nginx
       containers:
       - name: login-nginx
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/login-nginx:v3.0
+        image: $(LOGIN_NGINX_IMAGE)
         ports:
         - containerPort: 80
         livenessProbe:
