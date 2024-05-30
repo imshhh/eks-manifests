@@ -4,7 +4,7 @@ metadata:
   labels:
     app: concert-nginx
   name: concert-nginx
-  namespace: $(CONCERT_NGINX_NAMESPACE)
+  namespace: front-end
 spec:
   replicas: $(CONCERT_NGINX_REPLICA_COUNT)
   selector:
