@@ -42,10 +42,10 @@ patches:
   - path: overlays/stg/root-nginx-patch.yaml
     target:
       kind: Deployment
-      name: root-nginx
+      name: nginx
   - path: overlays/stg/root-tomcat-patch.yaml
     target:
       kind: Deployment
-      name: root-tomcat
+      name: tomcat
 
 
