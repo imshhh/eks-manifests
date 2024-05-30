@@ -7,7 +7,7 @@ metadata:
   name: concert-tomcat
   namespace: back-end
 spec:
-  replicas: 2
+  replicas: $(CONCERT_NGINX_REPLICA_COUNT)
   selector:
     matchLabels:
       app: concert-tomcat
@@ -39,7 +39,7 @@ spec:
             app: concert-tomcat
       containers:
       - name: concert-tomcat
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/stg-concert-tomcat:v1.0
+        image: $(CONCERT_TOMCAT_IMAGE)
         ports:
         - containerPort: 8080  
         livenessProbe:
