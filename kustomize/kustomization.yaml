@@ -22,4 +22,7 @@ resources:
   - base/root-tomcat/hpa.yaml
   - base/prd-ingress.yaml
   - base/stg-ingress.yaml
-  - overlays/stg/patch.yaml
+
+patches:
+  - path: overlays/stg/patch.yaml
+
