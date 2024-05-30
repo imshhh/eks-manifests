@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: root-nginx
+spec:
+  replicas: 10
+  template:
+    spec:
+      containers:
+      - name: root-nginx
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/root-nginx:v2.0
