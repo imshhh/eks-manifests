@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: concert-nginx
-  namespace: front-end
 spec:
   replicas: 10
   template:
@@ -16,7 +15,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: concert-tomcat
-  namespace: back-end
 spec:
   replicas: 10
   template:
@@ -30,7 +28,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: login-nginx
-  namespace: front-end
 spec:
   replicas: 10
   template:
@@ -44,7 +41,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: login-tomcat
-  namespace: back-end
 spec:
   replicas: 10
   template:
@@ -58,7 +54,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: root-nginx
-  namespace: front-end
 spec:
   replicas: 10
   template:
@@ -72,7 +67,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: root-tomcat
-  namespace: back-end
 spec:
   replicas: 10
   template:
