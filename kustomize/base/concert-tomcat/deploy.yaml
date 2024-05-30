@@ -5,7 +5,7 @@ metadata:
   labels:
     app: concert-tomcat
   name: concert-tomcat
-  namespace: $(CONCERT_TOMCAT_NAMESPACE)
+  namespace: back-end
 spec:
   replicas: $(CONCERT_TOMCAT_REPLICA_COUNT)
   selector:
