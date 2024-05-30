@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: $(ROOT_NGINX_REPLICA_COUNT)
+  replicas: $(NGINX_REPLICA_COUNT)
   selector:
     matchLabels:
       app: nginx
@@ -37,7 +37,7 @@ spec:
                   app: nginx
               topologyKey: kubernetes.io/hostname
       containers:
-      - image: $(ROOT_NGINX_IMAGE)
+      - image: $(NGINX_IMAGE)
         name: nginx
         ports:
         - containerPort: 80
