@@ -23,6 +23,9 @@ resources:
   - base/prd-ingress.yaml
   - base/stg-ingress.yaml
 
+resources:
+  - ../../base/prd-ingress.yaml
+
 patches:
   - path: overlays/stg/patch.yaml
     target:
