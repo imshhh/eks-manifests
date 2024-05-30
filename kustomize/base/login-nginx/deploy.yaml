@@ -4,7 +4,7 @@ metadata:
   labels:
     app: login-nginx
   name: login-nginx
-  namespace: $(LOGIN_NGINX_NAMESPACE)
+  namespace: front-end
 spec:
   replicas: $(LOGIN_NGINX_REPLICA_COUNT)
   selector:
