@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/root-tomcat:update2
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/root-tomcat:baepo2
