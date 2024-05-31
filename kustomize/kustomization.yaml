@@ -23,27 +23,27 @@ resources:
   - base/v1-ingress.yaml
 
 patches:
-  - path: overlays/v1/concert-nginx-patch.yaml
+  - path: overlays/v2/concert-nginx-patch.yaml
     target:
       kind: Deployment
       name: concert-nginx
-  - path: overlays/v1/concert-tomcat-patch.yaml
+  - path: overlays/v2/concert-tomcat-patch.yaml
     target:
       kind: Deployment
       name: concert-tomcat
-  - path: overlays/v1/login-nginx-patch.yaml
+  - path: overlays/v2/login-nginx-patch.yaml
     target:
       kind: Deployment
       name: login-nginx
-  - path: overlays/v1/login-tomcat-patch.yaml
+  - path: overlays/v2/login-tomcat-patch.yaml
     target:
       kind: Deployment
       name: login-tomcat
-  - path: overlays/v1/root-nginx-patch.yaml
+  - path: overlays/v2/root-nginx-patch.yaml
     target:
       kind: Deployment
       name: nginx
-  - path: overlays/v1/root-tomcat-patch.yaml
+  - path: overlays/v2/root-tomcat-patch.yaml
     target:
       kind: Deployment
       name: tomcat
