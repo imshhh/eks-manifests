@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: tomcat
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/root-tomcat:baepo2
