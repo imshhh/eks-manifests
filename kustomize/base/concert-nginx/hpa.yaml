@@ -4,7 +4,7 @@ metadata:
   name: concert-nginx-hpa
   namespace: front-end
 spec:
-  maxReplicas: 10
+  maxReplicas: 15
   minReplicas: 2
   scaleTargetRef:
     apiVersion: apps/v1
