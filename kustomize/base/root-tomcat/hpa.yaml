@@ -10,4 +10,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: tomcat
-  targetCPUUtilizationPercentage: 40
+  targetCPUUtilizationPercentage: 50
