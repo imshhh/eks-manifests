@@ -20,7 +20,7 @@ resources:
   - base/root-tomcat/deploy.yaml
   - base/root-tomcat/service.yaml
   - base/root-tomcat/hpa.yaml
-  - base/v1-ingress.yaml
+  - base/v2-ingress.yaml
 
 patches:
   - path: overlays/v1/concert-nginx-patch.yaml
