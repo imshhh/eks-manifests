@@ -4,35 +4,37 @@ metadata:
   name: nginx-ingress
   namespace: front-end
   annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:381492217459:certificate/55b9afc9-d4b8-4341-b652-1d09ee50d85d
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443},{"HTTP":80}]'
-    alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
+    kubernetes.io/ingress.class: alb             # ALB Ingress Controller 사용
+    alb.ingress.kubernetes.io/scheme: internet-facing  # ALB를 internet-facing으로 설정
+    alb.ingress.kubernetes.io/target-type: ip        # 대상 유형을 IP 주소로 설정
+    alb.ingress.kubernetes.io/healthcheck-path: /health # ALB 상태 확인 경로 추가
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:381492217459:certificate/55b9afc9-d4b8-4341-b652-1d09ee50d85d  # SSL 인증서 ARN
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'  # 리스닝 포트 설정
+    alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'  # HTTP -> HTTPS 리다이렉션
 spec:
   rules:
   - host: www.ticket-java.shop
     http:
       paths:
-      - path: /
-        pathType: Prefix
+      - path: / 
+        pathType: Prefix       # 경로 유형 Prefix (기본값이므로 생략 가능)
         backend:
           service:
-            name: nginx-svc
+            name: nginx-svc    # 기본 경로("/")는 nginx-svc로 라우팅
             port:
               number: 80
       - path: /login
-        pathType: Prefix
+        pathType: Prefix       # 경로 유형 Prefix
         backend:
           service:
-            name: login-nginx-svc
+            name: login-nginx-svc # "/login" 경로는 login-nginx-svc로 라우팅
             port:
               number: 80
       - path: /concert
-        pathType: Prefix
+        pathType: Prefix       # 경로 유형 Prefix
         backend:
           service:
-            name: concert-nginx-svc
+            name: concert-nginx-svc # "/concert" 경로는 concert-nginx-svc로 라우팅
             port:
               number: 80
+
