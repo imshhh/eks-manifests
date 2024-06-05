@@ -17,24 +17,24 @@ spec:
     http:
       paths:
       - path: / 
-        pathType: Prefix       # 경로 유형 Prefix (기본값이므로 생략 가능)
+        pathType: Prefix      
         backend:
           service:
-            name: nginx-svc    # 기본 경로("/")는 nginx-svc로 라우팅
+            name: nginx-svc    
             port:
               number: 80
       - path: /login
-        pathType: Prefix       # 경로 유형 Prefix
+        pathType: Prefix     
         backend:
           service:
-            name: login-nginx-svc # "/login" 경로는 login-nginx-svc로 라우팅
+            name: login-nginx-svc 
             port:
               number: 80
       - path: /concert
-        pathType: Prefix       # 경로 유형 Prefix
+        pathType: Prefix      
         backend:
           service:
-            name: concert-nginx-svc # "/concert" 경로는 concert-nginx-svc로 라우팅
+            name: concert-nginx-svc 
             port:
               number: 80
 
