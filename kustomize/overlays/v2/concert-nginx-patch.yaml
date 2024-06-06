@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   name: concert-nginx
 spec:
-  replicas: 2
+  replicas: 4
   template:
     spec:
       containers:
       - name: concert-nginx
-        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/concert-nginx:v2.0
+        image: 381492217459.dkr.ecr.ap-northeast-2.amazonaws.com/concert-nginx:v3.0
